@@ -23,6 +23,7 @@ body {
   max-width: 120px; /* Set a maximum width for the logo */
   filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.7)); /* Drop shadow effect */
   transition: transform 0.3s; /* Smooth transition for hover effect */
+  animation: heartbeat 2s infinite; /* Apply the heartbeat animation */
 }
 
 .brand:hover {
@@ -166,12 +167,12 @@ nav {
     filter: drop-shadow(
       2px 2px 5px rgba(0, 0, 0, 0.7)
     ); /* Drop shadow effect */
-    position: absolute; /* Position the logo absolutely */
-    top: 50%; /* Move down 50% of the nav height */
-    left: 50%; /* Move right 50% of the nav width */
     transform: translate(-50%, -50%); /* Center it perfectly */
     transition: transform 0.3s; /* Smooth transition for hover effect */
-    padding-top: 10vh;
+    animation: heartbeat 2s infinite; /* Default to heartbeat animation */
+    position: absolute; /* Position the logo absolutely */
+    padding-bottom: 60vh;
+    left: 30%; /* Center the logo horizontally */
   }
 
   .brand:hover {
@@ -234,5 +235,50 @@ nav {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Scale up */
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
   }
 }
