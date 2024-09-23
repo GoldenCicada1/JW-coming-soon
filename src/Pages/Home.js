@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../logo.png";
 import Banner from "../assets/images/banner.svg";
 import Timer from "./components/Timer";
 
 const Home = () => {
+  const [email, setEmail] = useState(""); // State to hold the email input
+  const [error, setError] = useState(""); // State to hold error messages
+
+  const handleInputChange = (event) => {
+    setEmail(event.target.value); // Update state with the current input value
+    setError(""); // Clear error when user starts typing
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
+    if (!emailPattern.test(email)) {
+      setError("Please enter a valid email address."); // Set error message
+      return;
+    }
+
+    console.log("Email submitted:", email); // Log the email to the console
+    setEmail(""); // Clear the input field after submission
+  };
+
   return (
     <div id="home">
       <section>
@@ -21,10 +43,10 @@ const Home = () => {
                   At Japhets Wings, we’re dedicated to elevating your
                   experience with innovative solutions and exceptional service.
                   Stay tuned as we prepare to take flight and unveil something
-                  truly special. Your journey begins soon!{" "}
+                  truly special. Your journey begins soon!
                 </p>
                 <div className="form-container">
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <div className="form-row align-items-center">
                       <div className="col-auto">
                         <div className="input-group mb-2">
@@ -33,13 +55,17 @@ const Home = () => {
                             className="form-control"
                             placeholder="Enter Your Email Address"
                             aria-label="Enter Your Email Address"
+                            value={email} // Bind state to input
+                            onChange={handleInputChange} // Handle input change
+                            required // Ensure the field is required
                           />
                           <div className="input-group-append">
-                            <button className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary">
                               Notify Me
                             </button>
                           </div>
                         </div>
+                        {error && <div className="text-danger">{error}</div>} {/* Display error message */}
                       </div>
                     </div>
                   </form>
