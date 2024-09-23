@@ -16,10 +16,16 @@ body {
   height: 89vh;
 }
 
+.brand {
+  max-width:100px; /* Set a maximum width for the logo */
+
+}
+
 .cid-rOM5rKjpOn .container {
   height: 100%;
-  padding-top: 20px;
 }
+
+
 
 .cid-rOM5rKjpOn h1 {
   padding-bottom: 15px;
@@ -63,20 +69,19 @@ nav {
 
 .timer {
   color: #ffffff;
-  margin: 0 5vw;
+  margin: 20px 0; /* Adjust margin for better spacing */
   font-family: "Roboto", sans-serif;
+  text-align: center; /* Center the timer text */
 }
 
 .timer p {
   margin-bottom: 0;
   font-size: 38px;
-  text-align: center;
   font-weight: bold;
 }
 
 .timer h5 {
   font-size: 12px;
-  text-align: center;
   color: #7a7a7a;
 }
 
@@ -86,7 +91,13 @@ nav {
 
 @media only screen and (max-width: 767px) {
   .banner-container {
-    display: none;
+    display: flex; /* Ensure the banner container is displayed */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .banner {
+    height: 20vh; /* Adjusted height for smaller screens */
   }
 
   .cid-rOM5rKjpOn .text-section { /* Updated class name */
@@ -100,4 +111,43 @@ nav {
   .timer h5 {
     font-size: 10px;
   }
+
+  .banner-text {
+
+    font-size: 12px;
+  }
+  
 }
+
+.input-group {
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Prevents overlap of input and button */
+}
+
+.form-control {
+  border: 1px solid #ccc; /* Light border */
+  border-right: none; /* No right border for the input */
+  padding: 8px; /* More padding for a better look */
+  font-size: 10px; /* Slightly larger font */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+.input-group-append .btn {
+  border: 1px solid #007bff; /* Match button border with primary color */
+  border-left: none; /* No left border for the button */
+  padding: 8px 8px; /* Comfortable padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.input-group-append .btn:hover {
+  background-color: #0056b3; /* Darker color on hover */
+  border-color: #0056b3; /* Darker border on hover */
+}
+
