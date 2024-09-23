@@ -17,3 +17,7 @@ Below is a screenshot of the landing page.
 <br>
 ![Japhets Wings Landing Page Screenshot](https://github.com/GoldenCicada1/JW-coming-soon/blob/a866d14367506b915971c94859ac6622914bc7fb/public/JW%20Landing%20Page%20Coming%20Soon.png)
 
+Below is a screenshot of the landing page in Small Screen.
+<br>
+<br>
+![Japhets Wings Landing Page Screenshot Small Size Scree](https://github.com/GoldenCicada1/JW-coming-soon/blob/a866d14367506b915971c94859ac6622914bc7fb/public/JW%20Landing%20Page%20Coming%20Soon%20small%20screen.png)
