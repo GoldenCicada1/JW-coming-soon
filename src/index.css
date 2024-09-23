@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -14,25 +12,25 @@ body {
   color: #ffffff;
 }
 
-.cid-rOM5rKjpOn{
+.cid-rOM5rKjpOn {
   height: 89vh;
 }
 
-.cid-rOM5rKjpOn .container{
+.cid-rOM5rKjpOn .container {
   height: 100%;
   padding-top: 20px;
 }
 
-.cid-rOM5rKjpOn h1{
+.cid-rOM5rKjpOn h1 {
   padding-bottom: 15px;
 }
 
-.cid-rOM5rKjpOn p{
+.cid-rOM5rKjpOn p {
   padding-bottom: 20px;
 }
 
-.cid-rOM5rKjpOn .left{
-  padding-top: 60px;
+.cid-rOM5rKjpOn .left {
+  padding-top: 5vh;
 }
 
 .banner-text {
@@ -41,33 +39,32 @@ body {
 
 nav {
   height: 11vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
 }
 
 .display-1 {
   font-family: "DM Sans", sans-serif;
-  font-size: 4.6rem;
-  line-height: 1.1 !important;
+  font-size: clamp(2.26rem, 4vw, 4.6rem);
+  line-height: 1.1;
 }
 
 .display-7 {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.4rem;
-  line-height: 1.4 !important;
+  font-size: clamp(1.14rem, 2vw, 1.4rem);
+  line-height: 1.4;
 }
 
 .banner {
-  background-position: center !important;
-  background-size: cover !important;
-  background-image: url("./assets/images/banner.svg") !important;
   width: 100%;
   height: 60vh;
+  background-size: cover !important; /* Optional depending on the design */
+  background-position: center !important;
 }
+
 
 .timer {
   color: #ffffff;
-  margin: 0 90px;
+  margin: 0 5vw;
   font-family: "Roboto", sans-serif;
 }
 
@@ -81,34 +78,27 @@ nav {
 .timer h5 {
   font-size: 12px;
   text-align: center;
-  color: #9e9e9e;
+  color: #7a7a7a;
 }
+
 .timer .sep {
   margin-top: 18px;
 }
 
-.md-timer {
-  display: none;
-}
-
 @media only screen and (max-width: 767px) {
-  .display-1 {
-    font-size: calc(2.26rem + (4.6 - 2.26) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc(
-      1.1 * (2.26rem + (4.6 - 2.26) * ((100vw - 20rem) / (48 - 20)))
-    );
-  }
-  .display-7 {
-    font-size: 1.12rem;
-    font-size: calc(1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc(
-      1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)))
-    );
-  }
-  .banner-container{
+  .banner-container {
     display: none;
   }
-  .cid-rOM5rKjpOn .left{
+
+  .cid-rOM5rKjpOn .left {
     text-align: center;
+  }
+
+  .timer p {
+    font-size: 28px;
+  }
+
+  .timer h5 {
+    font-size: 10px;
   }
 }
