@@ -8,8 +8,8 @@ body {
 #home {
   height: 100vh;
   width: 100%;
-  background-color: rgb(7, 7, 65);
-  color: #ffffff;
+  background: linear-gradient(135deg, #f6e58d, #f79f1f); /* Gold gradient */
+  color: #333; /* Darker text color for contrast */
 }
 
 .cid-rOM5rKjpOn {
@@ -17,25 +17,30 @@ body {
 }
 
 .brand {
-  max-width:140px; /* Set a maximum width for the logo */
+  max-width: 120px; /* Set a maximum width for the logo */
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.7)); /* Drop shadow effect */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  
+}
 
+.brand:hover {
+  transform: scale(1.05); /* Slightly enlarge the logo on hover */
 }
 
 .cid-rOM5rKjpOn .container {
   height: 100%;
 }
 
-
-
 .cid-rOM5rKjpOn h1 {
   padding-bottom: 15px;
+  color: #f39c12; /* Gold color for headings */
 }
 
 .cid-rOM5rKjpOn p {
   padding-bottom: 20px;
 }
 
-.cid-rOM5rKjpOn .text-section { /* Renamed from .left */
+.cid-rOM5rKjpOn .text-section {
   padding-top: 5vh;
 }
 
@@ -52,6 +57,8 @@ nav {
   font-family: "DM Sans", sans-serif;
   font-size: clamp(2.26rem, 4vw, 4.6rem);
   line-height: 1.1;
+  color: #f39c12; /* Gold color for main title */
+  padding-top: 4vh;
 }
 
 .display-7 {
@@ -100,7 +107,7 @@ nav {
     height: 20vh; /* Adjusted height for smaller screens */
   }
 
-  .cid-rOM5rKjpOn .text-section { /* Updated class name */
+  .cid-rOM5rKjpOn .text-section {
     text-align: center;
   }
 
@@ -113,10 +120,33 @@ nav {
   }
 
   .banner-text {
-
     font-size: 12px;
   }
+
+  nav {
+    height: 11vh;
+    position: relative; /* Make the nav a positioning context */
+   
+  }
   
+  .brand {
+    max-width: 150px; /* Set a maximum width for the logo */
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.7)); /* Drop shadow effect */
+    position: absolute; /* Position the logo absolutely */
+    top: 50%; /* Move down 50% of the nav height */
+    left: 50%; /* Move right 50% of the nav width */
+    transform: translate(-50%, -50%); /* Center it perfectly */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    padding-top: 10vh;
+  }
+  
+  .brand:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* Enlarge the logo on hover */
+  }
+  
+  .display-1 {
+    padding-top: 7vh;
+  }
 }
 
 .input-group {
@@ -133,21 +163,21 @@ nav {
 }
 
 .form-control:focus {
-  border-color: #007bff; /* Change border color on focus */
+  border-color: #f39c12; /* Gold color on focus */
   outline: none; /* Remove default outline */
 }
 
 .input-group-append .btn {
-  border: 1px solid #007bff; /* Match button border with primary color */
+  border: 1px solid #f39c12; /* Match button border with gold color */
   border-left: none; /* No left border for the button */
   padding: 8px 8px; /* Comfortable padding */
-  background-color: #007bff; /* Button background color */
+  background-color: #f39c12; /* Gold button background color */
   color: white; /* Button text color */
   transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .input-group-append .btn:hover {
-  background-color: #0056b3; /* Darker color on hover */
-  border-color: #0056b3; /* Darker border on hover */
+  background-color: #e67e22; /* Darker gold color on hover */
+  border-color: #e67e22; /* Darker border on hover */
 }
 
