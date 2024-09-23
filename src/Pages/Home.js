@@ -86,10 +86,9 @@ const Home = () => {
               <div className="col-lg-6 col-md-6 col-sm-12 text-section">
                 <h1 className="display-1">Coming soon!</h1>
                 <p className="banner-text display-7">
-                  At Japhets Wings, we’re dedicated to elevating your experience
-                  with innovative solutions and exceptional service. Stay tuned
-                  as we prepare to take flight and unveil something truly
-                  special. Your journey begins soon!
+                  Japhets Wings: Elevating your journey with innovative
+                  solutions and exceptional service. Exciting things are coming
+                  soon!
                 </p>
 
                 <div className="form-container">

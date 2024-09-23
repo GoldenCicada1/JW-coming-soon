@@ -137,6 +137,7 @@ nav {
 
   .banner {
     height: 20vh; /* Adjusted height for smaller screens */
+    margin-top: 2vh;
   }
 
   .cid-rOM5rKjpOn .text-section {
@@ -152,7 +153,7 @@ nav {
   }
 
   .banner-text {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   nav {
