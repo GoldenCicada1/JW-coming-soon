@@ -2,9 +2,9 @@ import React, { useEffect, useState, useCallback } from "react";
 
 export default function Timer() {
   const calculateTimeLeft = useCallback(() => {
+    const targetDate = new Date("2024-10-26T00:00:00"); // Move targetDate here
     const today = new Date();
-    const nextday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 30);
-    const difference = nextday - today;
+    const difference = targetDate - today;
 
     if (difference <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -13,7 +13,7 @@ export default function Timer() {
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 / 60)) % 60),
+      minutes: Math.floor((difference / (1000 * 60)) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
   }, []);
