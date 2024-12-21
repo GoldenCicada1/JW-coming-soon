@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 
 export default function Timer() {
   const calculateTimeLeft = useCallback(() => {
-    const targetDate = new Date("2024-10-26T00:00:00"); // Move targetDate here
+    const targetDate = new Date("2025-06-18T00:00:00"); // Move targetDate here
     const today = new Date();
     const difference = targetDate - today;
 
